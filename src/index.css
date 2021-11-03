@@ -1,13 +1,518 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+    scroll-behavior: smooth;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mt {
+    margin-top: 5rem;
+}
+
+.container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 10px 0 20px 0;
+    background-color: #eef4ff;
+    z-index: 100;
+}
+
+.nav {
+    height: 3rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hamburger {
+    margin-left: auto;
+}
+
+.hamburger-icon {
+    position: relative;
+    top: 5px;
+    background-color: transparent;
+    border: 1px solid #2d76f9;
+    border-radius: 5px;
+    padding: 8px 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.img-logo {
+    margin-right: 10px;
+    position: relative;
+    top: 12px;
+}
+
+.nav-logo {
+    color: #212121;
+    font-family: "Nunito", sans-serif !important;
+    font-weight: bold;
+}
+
+.nav-logo span,
+.footer-logo span {
+    color: #2d76f9;
+    font-family: "Nunito", sans-serif !important;
+    font-weight: bold;
+}
+
+.nav-menu {
+    width: 88%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-list {
+    display: flex;
+    column-gap: 3.5rem;
+    margin-left: 5rem;
+}
+
+.nav-link {
+    color: #212121;
+}
+
+.active-link {
+    color: #2d76f9;
+    font-weight: bold;
+}
+
+.nav-btn {
+    position: relative;
+    top: 5px;
+    margin-left: auto;
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #2d76f9;
+    border-radius: 50px;
+    border: 1px solid #2d76f9;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.home-background {
+    position: relative;
+    background-color: #eef4ff;
+    border-bottom-left-radius: 100px;
+}
+
+.home-container,
+.download-container {
+    display: flex;
+    align-items: center;
+}
+
+.card-container {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 3rem;
+}
+
+.home-img {
+    padding-top: 5rem;
+    margin: 0 5.5rem 0 auto;
+}
+
+.home-card-easy {
+    background-color: #ffffff;
+    position: absolute;
+    top: 9rem;
+    right: 20rem;
+    border-radius: 20px;
+}
+
+.home-card-interesting {
+    background-color: #ffffff;
+    position: absolute;
+    top: 18rem;
+    right: 5rem;
+    border-radius: 20px;
+}
+
+.home-card-user {
+    background-color: #ffffff;
+    position: absolute;
+    padding: 0 1rem 0 1rem;
+    top: 25rem;
+    right: 24rem;
+    border-radius: 20px;
+}
+
+.home-card-title {
+    color: #747474;
+    margin: 0.5rem 0 0 1rem;
+}
+
+.home-card-image {
+    position: relative;
+    top: 5px;
+}
+
+.home-card-description {
+    padding: 1rem;
+    color: #2d76f9;
+    font-weight: 500;
+}
+
+.home-card-description-user {
+    padding: 0.75rem;
+    color: #2d76f9;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.home-card-description span {
+    padding: 0.5rem 1rem;
+    margin-right: 5px;
+    color: #ffffff;
+    background-color: #2d76f9;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.home-blog-img {
+    width: 250px;
+}
+
+.home-content {
+    padding-bottom: 5.5rem;
+}
+
+.home-title {
+    font-size: 4rem;
+    margin: 7rem 0 0.75rem 0;
+}
+
+.home-description {
+    color: #747474;
+    margin-bottom: 2rem;
+    line-height: 2.25rem;
+}
+
+.button {
+    background-color: #2d76f9;
+    color: #ffffff;
+    padding: 1rem 2.5rem;
+    margin: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.card {
+    padding-top: 8rem;
+}
+
+.card-img {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #eef4ff;
+    margin-bottom: 2rem;
+}
+
+.card-title {
+    margin-bottom: 2rem;
+}
+
+.card-description {
+    color: #747474;
+    line-height: 2.25rem;
+}
+
+.task-container,
+.download-container {
+    margin-top: 5rem;
+}
+
+.task-container,
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-img,
+.testimonial-img {
+    position: relative;
+    left: -10rem;
+    background-color: #eef4ff;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.remind-img {
+    position: relative;
+    right: -6.5rem;
+    background-color: #eef4ff;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.task-title,
+.testimonial-title {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+}
+
+.task-description,
+.footer-description,
+.footer-link {
+    color: #747474;
+    line-height: 2.25rem;
+}
+
+.download-content {
+    text-align: center;
+    padding: 6rem;
+    background-color: #2d76f9;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.download-title {
+    font-size: 2.25rem;
+    color: #ffffff;
+    margin-bottom: 5rem;
+}
+
+.download-button {
+    background-color: #ffffff;
+    color: #2d76f9;
+    margin-right: 2.5rem;
+    border: 0;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.about-button {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    padding: 1rem 2.5rem;
+    cursor: pointer;
+}
+
+.testimonial-img {
+    padding-right: 4rem;
+}
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card-title {
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    color: #747474;
+}
+
+.testimonial-card-title span {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #212121 !important;
+}
+
+.testimonial-description {
+    line-height: 2.25rem;
+    font-size: 1.125rem;
+}
+
+footer {
+    margin: 3rem 0 5rem 0;
+}
+
+.footer-section {
+    margin-bottom: 1rem;
+}
+
+.img-footer {
+    margin-right: 20px;
+    width: 7%;
+}
+
+.footer-logo {
+    color: #212121;
+    font-family: "Nunito", sans-serif !important;
+    font-weight: bold;
+    font-size: 2.25rem;
+    position: relative;
+    bottom: 1.75rem;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-links-parent {
+    display: flex;
+    column-gap: 10rem;
+}
+
+.footer-links {
+    color: #2d76f9;
+}
+
+.footer-socials-title {
+    display: none;
+}
+
+.footer-social {
+    font-size: 1.25rem;
+    margin-right: 1.5rem;
+}
+
+@media screen and (max-width: 719px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .home-background {
+        border-bottom-left-radius: 0;
+    }
+    .home-title {
+        margin: 6rem 0 1.5rem 0;
+        font-size: 3rem;
+    }
+    .home-content {
+        padding-bottom: 0;
+    }
+    .home-img {
+        margin: 1rem auto 4rem auto;
+    }
+    .home-card-easy {
+        top: 60%;
+        right: 55%;
+    }
+    .home-card-interesting {
+        top: 70%;
+        right: 8%;
+    }
+    .home-card-user {
+        top: 80%;
+        right: 50%;
+    }
+    .home-card-description,
+    .home-card-title {
+        font-size: 10px;
+    }
+    .home-card-description-user {
+        font-size: 18px;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .card {
+        padding-top: 3rem;
+        text-align: center;
+    }
+    .home-container,
+    .card-container,
+    .task-container,
+    .footer-container {
+        flex-direction: column;
+    }
+    .remind-content {
+        order: 2;
+    }
+    .remind-img {
+        order: 1;
+    }
+    .task-img,
+    .remind-img,
+    .testimonial-img {
+        left: 0;
+        right: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .task-blog-img,
+    .remind-blog-img,
+    .testimonial-blog-img {
+        max-width: 100%;
+        height: auto;
+    }
+    .task-title {
+        padding-top: 3rem;
+        font-size: 24px;
+    }
+    .download-container {
+        margin-top: 0;
+    }
+    .download-content {
+        padding: 0.75rem;
+    }
+    .download-title {
+        margin: 1rem 0 2rem 0;
+        font-size: 24px;
+    }
+    .download-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+    .download-button,
+    .about-button {
+        margin: 1rem auto 1rem auto;
+    }
+    .testimonial-img {
+        display: none;
+    }
+    .testimonial-title,
+    .footer-logo {
+        font-size: 24px;
+    }
+    .testimonial-description,
+    .footer-description {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+    .img-footer {
+        width: 70px;
+    }
+    .footer-links-parent {
+        column-gap: 3.5rem;
+    }
+    .footer-socials-title {
+        display: block;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .hamburger {
+        display: none;
+    }
 }
